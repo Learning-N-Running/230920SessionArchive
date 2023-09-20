@@ -1,0 +1,41 @@
+[ERC721Enumerable에 추가된 storage variable]
+아래의 실습 문제 푸실 때 참고하세요!
+
+//Mapping from owner to list of owned token IDs
+mapping(address owner => mapping(uint256 index => uint256)) private _ownedTokens;
+
+//Mapping from token ID to index of the owner tokens list
+mapping(uint256 tokenId => uint256) private _ownedTokensIndex;
+
+//Array with all token IDs, used for enumeration
+uint256[] private _allTokens;
+
+//Mapping from token ID to position in the allTokens array
+mapping(uint256 tokenId => uint256) private _allTokensIndex;
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+- Alice가 tokenId가 7인 token을 민팅할 때
+    - `_ownedTokens`  = {Alice:{0 : 7}}
+    - `_ownedTokensIndex`  = {7:0}
+    - `_allTokens` = [7]
+    - `_allTokensIndex` ={7:0}
+
+- Alice가 tokenId가 9,11인 token을 민팅할때(✅아래에 채워보세요!)
+    - `_ownedTokens`  = 
+    - `_ownedTokensIndex`  = 
+    - `_allTokens` =
+    - `_allTokensIndex` =
+
+- Bob에게 tokenId가 9인 token을 전송할 때 (✅아래에 채워보세요!)
+    - `_ownedTokens`  = 
+    - `_ownedTokensIndex`  = 
+    - `_allTokens` = 
+    - `_allTokensIndex` = 
+
+- Alice가 tokenId가 13인 token을 민팅하고, Bob이 tokenId가 9인 token을 소각할 때(✅아래에 채워보세요!)
+    - `_ownedTokens`  = 
+    - `_ownedTokensIndex`  = 
+    - `_allTokens` = 
+    - `_allTokensIndex` =
